@@ -10,6 +10,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  String titleMain= "Dashboard";
+
   IconButton notificationIcon = IconButton(
     icon: Icon(Icons.notifications),
   );
@@ -48,6 +51,27 @@ class _MyHomePageState extends State<MyHomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+
+      if (index == 0)
+        {
+          titleMain="Dashboard";
+        }
+      else if (index == 1)
+        {
+          titleMain="Invoices";
+        }
+      else if(index==2)
+        {
+          titleMain="Expenses";
+        }
+      else if(index==3)
+      {
+        titleMain="Time Tracker";
+      }
+      else if(index==4)
+      {
+        titleMain="More";
+      }
     });
   }
 
@@ -56,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(titleMain),
         actions: [
           IconButton(icon: notificationIcon),
           IconButton(icon: profileIcon),
