@@ -21,20 +21,28 @@ class _MyHomePageState extends State<MyHomePage> {
   //BottomStart
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Index 0: Dashboard',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Index 1: Invoices',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Expenses',
       style: optionStyle,
     ),
+    Text(
+      'Index 3: Time Tracker',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 4: More',
+      style: optionStyle,
+    )
   ];
 
   void _onItemTapped(int index) {
@@ -59,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
-            label: 'dashboard',
+            label: 'Dashboard',
             backgroundColor: Colors.blueGrey,
           ),
           BottomNavigationBarItem(
@@ -82,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.lightBlueAccent[400],
         onTap: _onItemTapped,
       ),
       //BottomEnd
