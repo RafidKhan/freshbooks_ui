@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/pages/home_page.dart';
+import 'package:untitled/pages/main_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.blue[600],
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Dashboard'),
+      home: MainPage(),
     );
   }
 }
